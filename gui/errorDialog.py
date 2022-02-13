@@ -83,6 +83,18 @@ class ErrorFrame(AuxiliaryFrame):
                "information about how this was triggered. Please contact the developers with the \n"
                "information provided through the EVE Online forums or file a GitHub issue.")
 
+        desc = desc + "\n".join(
+                    (
+                        "\n!!!", # yep, double newline
+                        "AUR PACKAGER WARNING: Pyfa is currently BROKEN on Arch Linux, many errors are to be expected.",
+                        "There are some incompatibilites between Pyfa's dependency - wxPython and python3.10.",
+                        "Until that is resolved some functionality of Pyfa will not work.",
+                        "",
+                        "PLEASE do not create new issues in Pyfa repository, instead use Pyfa's AUR page or this issue:",
+                        "https://github.com/pyfa-org/Pyfa/issues/2391",
+                    )
+                )
+
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
 
         mainSizer = wx.BoxSizer(wx.VERTICAL)
