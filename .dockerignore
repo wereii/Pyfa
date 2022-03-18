@@ -1,0 +1,11 @@
+.dockerignore
+**/build
+**.db
+**/.*
+
+
+tox.ini
+_development
+**/__pycache__
+**/*.pyc
+*.egg-info
